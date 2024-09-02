@@ -3,8 +3,8 @@
 time1="$( date +"%r" )"
 
 install1 () {
-directory=ubuntu-fs
-UBUNTU_VERSION=noble
+directory=ubuntu-fs-23
+UBUNTU_VERSION=mantic
 if [ -d "$directory" ];then
 first=1
 printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;227m[WARNING]:\e[0m \x1b[38;5;87m Skipping the download and the extraction\n"
@@ -59,7 +59,7 @@ cd $cur
 
 fi
 
-mkdir -p ubuntu-binds
+mkdir -p ubuntu-binds-23
 bin=startubuntu.sh
 printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[Installer thread/INFO]:\e[0m \x1b[38;5;87m Creating the start script, please wait...\n"
 cat > $bin <<- EOM
@@ -73,15 +73,15 @@ command="proot"
 command+=" --link2symlink"
 command+=" -0"
 command+=" -r $directory"
-if [ -n "\$(ls -A ubuntu-binds)" ]; then
-    for f in ubuntu-binds/* ;do
+if [ -n "\$(ls -A ubuntu-binds-23)" ]; then
+    for f in ubuntu-binds-23/* ;do
       . \$f
     done
 fi
 command+=" -b /dev"
 command+=" -b /proc"
 command+=" -b /sys"
-command+=" -b ubuntu-fs/tmp:/dev/shm"
+command+=" -b ubuntu-fs-23/tmp:/dev/shm"
 command+=" -b /data/data/com.termux"
 command+=" -b /:/host-rootfs"
 command+=" -b /sdcard"
@@ -118,7 +118,7 @@ printf "\e[0m"
 if [ "$1" = "-y" ];then
 install1
 elif [ "$1" = "" ];then
-printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;127m[QUESTION]:\e[0m \x1b[38;5;87m Do you want to install ubuntu-in-termux? [Y/n] "
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;127m[QUESTION]:\e[0m \x1b[38;5;87m Do you want to install Ubuntu 23.10? [Y/n] "
 
 read cmd1
 if [ "$cmd1" = "y" ];then
