@@ -3,7 +3,7 @@
 These are scripts that allow you to install Ubuntu 24.04 or 22.04 into your Termux application without the need for a rooted device, Run things like https://ollama.ai inside of Ubuntu locally on your Android device!
 
 ## OS Available
-- Ubuntu 24.04 (Noble) (24.sh)
+- Ubuntu 23.10 (Mantic) (23.sh)
 - Ubuntu 22.04 (Jammy) (22.sh)
 
 ### Installation steps
@@ -13,8 +13,8 @@ These are scripts that allow you to install Ubuntu 24.04 or 22.04 into your Term
 3. Go to your HOME folder: `cd ~`
 4. Download script: `git clone https://github.com/metaspartan/ubuntu`
 5. Go to script folder: `cd ubuntu`
-6. Give execution permission: `chmod +x 24.sh`
-7. Run the script: `./24.sh -y`
+6. Give execution permission: `chmod +x 23.sh`
+7. Run the script: `./23.sh -y`
 8. Launch Ubuntu: `./startubuntu.sh`
 
 ## Install Ollama
