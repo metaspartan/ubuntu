@@ -1,6 +1,6 @@
 # Ubuntu in Termux
 
-These are scripts that allow you to install Ubuntu 24.04 or 22.04 into your Termux application without the need for a rooted device, Run things like https://ollama.ai inside of Ubuntu locally on your Android device!
+These are scripts that allow you to install Ubuntu 23.10 or 22.04 into your Termux application without the need for a rooted device, Run things like https://ollama.ai inside of Ubuntu locally on your Android device!
 
 ## OS Available
 - Ubuntu 23.10 (Mantic) (23.sh)
